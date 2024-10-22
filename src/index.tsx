@@ -7,6 +7,29 @@ import { ProjectDetailsPage } from "./react-components/ProjectDetailsPage"
 import { ProjectsManager } from "./classes/ProjectsManager"
 import { ViewerProvider } from "./react-components/IFCViewer"
 import { UsersPage } from "./react-components/UsersPage"
+import * as BUI from "@thatopen/ui"
+
+BUI.Manager.init()
+
+declare global {
+    namespace JSX {
+      interface IntrinsicElements {
+        "bim-grid": any;
+        "bim-text-input": any;
+        "bim-button": any;
+        "bim-label": any;
+        "bim-panel": any;
+        "bim-panel-section": any;
+        "bim-table": any;
+        "bim-dropdown": any;
+        "bim-option": any;
+        "bim-toolbar": any;
+        "bim-toolbar-section": any;
+        "bim-toolbar-group": any;
+        "bim-viewport": any;
+      }
+    }
+}
 
 const projectsManager = new ProjectsManager()
 
